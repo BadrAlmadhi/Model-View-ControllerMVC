@@ -1,8 +1,8 @@
-const sequelize = require('sequelize'); // import sequelize
+let sequelize = require('sequelize'); // import sequelize
 
 require('dotenv').config(); // to read env file
 
-let sequelize;
+//let sequelize;
 
 if (process.env.JAWSDB_URL) {
     sequelize = new sequelize(process.env.JAWSDB_URL);

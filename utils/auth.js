@@ -1,3 +1,5 @@
+// middleware if user not logged in redirect to login page
+
 const withAuth = (req, res, next) => {
     if (!req.session.logged_in) {
         res.redirect('/login');
@@ -6,4 +8,4 @@ const withAuth = (req, res, next) => {
     }
 };
 
-model.exports = withAuth;
+module.exports = withAuth;
