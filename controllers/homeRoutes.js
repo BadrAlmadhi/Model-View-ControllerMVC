@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
 
         res.render('homepage', {
             blogs,
-            logged_in: req.session.logged_in
+            // logged_in: req.session.logged_in
         });
     } catch (err) {
         res.status(500).json(err);
@@ -69,6 +69,7 @@ router.get('/profile', withAuth, async (req, res) => {
     }
 });
 
+// the /login route is refereeing to the login.handlebars
 router.get('/login', (req, res) => {
     // if user logged in direct to profile
     if (req.session.logged_in) {
