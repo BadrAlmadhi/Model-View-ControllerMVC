@@ -1,3 +1,5 @@
-function format_date(date) {
-    return moment(date).format("YYYY-MM-DD"); // Example format, customize as needed
-}
+module.exports = {
+    format_date: (date) => {
+        return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
+    },
+};
