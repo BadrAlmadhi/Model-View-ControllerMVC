@@ -15,8 +15,11 @@
         <nav class="navbar navbar-light bg-light">
             <form class="form-inline">
                 <button class="btn btn-outline-success" type="button">Home</button>
-                <button class="btn btn-outline-success" type="button">Dashboard</button>
-                <button class="btn btn-outline-success" type="button">logout</button>
+                <button class="btn btn-outline-success" type="button" href="">Dashboard</button>
+                {{!-- {{#if logged_in}} --}}
+                <button class="btn btn-outline-success" type="button"><a href="/login">logout</a></button>
+
+                {{!-- {{/if}} --}}
 
                 <h1>The Tech Blog</h1>
             </form>
@@ -39,11 +42,11 @@
             </nav>
 
             <!-- Only display the logout button if the user is logged in -->
-            {{#if logged_in}}
+            {{!-- {{#if logged_in}}
             <nav>
                 <button class="btn" id="logout">logout</button>
             </nav>
-            {{/if}}
+            {{/if}} --}}
         </header>
         <main class="container container-fluid mt-5">
             {{{ body }}}
